@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: #17C420;
-    padding: 0;
+    padding: 50px;
+    background-color: ${props => props.backgroundColor};
+`
+
+export const ChartContainer = styled(Container) `
+    padding: 15px;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
 `
