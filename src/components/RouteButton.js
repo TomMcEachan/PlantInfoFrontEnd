@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+const axios = require('axios');
 
 /**
  * Creates the Styles for the GetData Button
@@ -59,15 +59,16 @@ const ButtonList = [
 ]
 
 
-
 /**
- * This Function returns Buttons
+ * This Function returns DataButtons
  */
-function Button() {
+function RouteButton() {
     return (
        <div>
            {ButtonList.map(( {id, text, route}) => (
-           <DataButton backgroundColor="white" color="black" key={id}>{text}</DataButton>
+           <DataButton backgroundColor="white" color="black" key={id} onClick={() => 
+               
+            ">{text}</DataButton>
            ))}
        </div>
     );
@@ -77,4 +78,4 @@ function Button() {
 
 
 
-export default Button;
+export default RouteButton;
