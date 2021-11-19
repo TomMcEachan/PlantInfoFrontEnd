@@ -59,6 +59,12 @@ const ButtonList = [
 ]
 
 
+function routeHandler(route) {
+    console.log(route)
+    window.open(route, "_blank");
+}
+
+
 /**
  * This Function returns DataButtons
  */
@@ -66,16 +72,10 @@ function RouteButton() {
     return (
        <div>
            {ButtonList.map(( {id, text, route}) => (
-           <DataButton backgroundColor="white" color="black" key={id} onClick={() => 
-               
-            ">{text}</DataButton>
+           <DataButton backgroundColor="white" color="black" key={id} onClick={() => routeHandler(route)}>{text}</DataButton>
            ))}
        </div>
     );
 }
-
-
-
-
 
 export default RouteButton;
