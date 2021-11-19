@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-const axios = require('axios');
 
 /**
  * Creates the Styles for the GetData Button
@@ -9,7 +8,7 @@ const DataButton = styled.button`
 
     width: 200px;
     height: 50px;
-    border-radius: 10rem;
+    font-size: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     transition: background-color 30ms ease-out 100ms;
@@ -22,7 +21,7 @@ const DataButton = styled.button`
     margin: 20px;
 
     &:hover {
-    background-color: black;
+    background-color: #17C420;
     color: white;
     transition: all .3s;
     animation: shake 0.82s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -72,7 +71,7 @@ function RouteButton() {
     return (
        <div>
            {ButtonList.map(( {id, text, route}) => (
-           <DataButton backgroundColor="white" color="black" key={id} onClick={() => routeHandler(route)}>{text}</DataButton>
+           <DataButton backgroundColor="black" color="white" key={id} onClick={() => routeHandler(route)}>{text}</DataButton>
            ))}
        </div>
     );
