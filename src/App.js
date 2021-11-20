@@ -1,12 +1,12 @@
 import Header from "./components/Header"
 import {Container} from "./components/Container"
-import DataChart from "./components/DataChart";
+import TempChart from "./components/Charts";
 
 function App() {
   return (
   <Container>
     <Header />
-    <DataChart />
+    <TempChart />
   </Container>
   );
 }
