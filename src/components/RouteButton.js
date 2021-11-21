@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 /**
  * Creates the Styles for the GetData Button
@@ -18,7 +20,7 @@ const DataButton = styled.button`
 
     /*The resulting text-color will be based on the color props.*/
     color: ${props => props.color};
-    margin: 20px;
+    margin: 5px;
 
     &:hover {
     background-color: #17C420;
@@ -69,11 +71,15 @@ function routeHandler(route) {
  */
 function RouteButton() {
     return (
-       <div>
-           {ButtonList.map(( {id, text, route}) => (
-           <DataButton backgroundColor="black" color="white" key={id} onClick={() => routeHandler(route)}>{text}</DataButton>
-           ))}
-       </div>
+       <Box sx={{flexGrow: 1 }}>
+           <Grid container spacing ={3}>
+                <Grid item xs>
+                    {ButtonList.map(( {id, text, route}) => (
+                    <DataButton backgroundColor="black" color="white" key={id} onClick={() => routeHandler(route)}>{text}</DataButton>
+                    ))}
+                </Grid>
+           </Grid>
+        </Box>
     );
 }
 
