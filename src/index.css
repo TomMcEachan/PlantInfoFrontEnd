@@ -22,6 +22,8 @@ code {
         background: transparent;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 p{
   margin-left: 25px;
   font-family: Roboto, sans-serif;

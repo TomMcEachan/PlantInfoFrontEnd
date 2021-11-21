@@ -6,8 +6,6 @@ import Grid from '@mui/material/Grid';
  * Creates the Styles for the GetData Button
  */
 const DataButton = styled.button`
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-
     width: 200px;
     height: 50px;
     font-size: 80%;
