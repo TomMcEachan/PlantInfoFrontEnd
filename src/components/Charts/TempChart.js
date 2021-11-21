@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme , VictoryAxis, VictoryTooltip} from 'victory';
+import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme , VictoryAxis} from 'victory';
 
 
 export default function TempChart() {
