@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { VictoryLine, VictoryChart, VictoryTheme , VictoryAxis} from 'victory';
+import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme , VictoryAxis, VictoryTooltip} from 'victory';
+
 
 export default function TempChart() {
 
@@ -30,20 +31,40 @@ export default function TempChart() {
    
    return(
    <div>
-      <VictoryChart theme={VictoryTheme.material} domainPadding={40} padding={30}>
-         <VictoryAxis fixLabelOverlap 
+      <VictoryChart theme={VictoryTheme.material} 
+         domainPadding={10} padding={25}
+         animate={{duration: 2000}}
+         
+      >
+         <VictoryAxis 
+            fixLabelOverlap 
             label="Published At"
+            style={{
+               tickLabels: {fill: "transparent", margin:[20]}
+            }}
          />
-         <VictoryAxis dependentAxis
+         <VictoryAxis 
+            dependentAxis
             label="Temperature"
+            style={{
+               tickLabels: {fill: "transparent", padding: "30px"}
+            }}
+         />
+         <VictoryBar 
+             style={{data: {fill: "#add8e6"}}}
+             alignment="start"
+             data={temps} 
+             x="published" 
+             y="temperature"
          />
          <VictoryLine 
-         padding={{top: 20, bottom: 60}}
-         style={{data: {stroke: "orange"}}}
-         alignment="start"
-         data={temps} 
-         x="published" 
-         y="temperature"/>
+            interpolation="natural"
+            style={{data: {stroke: "#FF9300"}}}
+            alignment="start"
+            data={temps} 
+            x="published" 
+            y="temperature"
+         />
       </VictoryChart>
    </div>
    );

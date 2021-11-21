@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { VictoryLine, VictoryChart, VictoryTheme , VictoryAxis, VictoryTooltip} from 'victory';
+import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme , VictoryAxis, VictoryTooltip} from 'victory';
 
 
 export default function MoistureChart() {
@@ -31,16 +31,34 @@ export default function MoistureChart() {
    
    return(
    <div>
-      <VictoryChart theme={VictoryTheme.material} domainPadding={10} padding={80}>
+      <VictoryChart theme={VictoryTheme.material} 
+      domainPadding={30} padding={25}
+      animate={{duration: 2000}}
+      >
          <VictoryAxis fixLabelOverlap 
             label="Published At"
+            style={{
+               tickLabels: {fill: "transparent"}
+            }}
          />
          <VictoryAxis dependentAxis
             label="Moisture"
+            style={{
+               tickLabels: {fill: "transparent"}
+            }}
          />
+         <VictoryBar 
+             style={{data: {fill: "#add8e6"}}}
+             alignment="start"
+             data={temps} 
+             x="published" 
+             y="moisture"
+         />
+
          <VictoryLine 
+         interpolation="natural"
          labelComponent={<VictoryTooltip />}
-         style={{data: {stroke: "blue"}}}
+         style={{data: {stroke: "#FF0000"}}}
          alignment="start"
          data={temps} 
          x="published" 

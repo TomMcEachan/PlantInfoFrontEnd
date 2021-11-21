@@ -10,7 +10,7 @@ const DataButton = styled.button`
 
     width: 200px;
     height: 50px;
-    font-size: 100%;
+    font-size: 80%;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     transition: background-color 30ms ease-out 100ms;
@@ -54,9 +54,9 @@ const DataButton = styled.button`
  * An Array with the information required to render the DataButton
  */
 const ButtonList = [
-    {id:"1",    text: "Get Moisture Data",      route:"https://plantinfo-api.netlify.app/.netlify/functions/moisture"},
-    {id:"2",    text: "Get Temperature Data",   route:"https://plantinfo-api.netlify.app/.netlify/functions/temperature"},
-    {id:"3",    text: "Get Humidity Data",      route:"https://plantinfo-api.netlify.app/.netlify/functions/humidity"}
+    {id:"1",    text: "Get Moisture Data (JSON)",      route:"https://plantinfo-api.netlify.app/.netlify/functions/moisture"},
+    {id:"2",    text: "Get Temperature Data (JSON)",   route:"https://plantinfo-api.netlify.app/.netlify/functions/temperature"},
+    {id:"3",    text: "Get Humidity Data (JSON)",      route:"https://plantinfo-api.netlify.app/.netlify/functions/humidity"}
 ]
 
 
@@ -71,6 +71,7 @@ function routeHandler(route) {
  */
 function RouteButton() {
     return (
+        
        <Box sx={{flexGrow: 1 }}>
            <Grid container spacing ={3}>
                 <Grid item xs>

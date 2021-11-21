@@ -19,7 +19,7 @@ function Header() {
     return (
        <MenuContainer>
            <AppHeader>Plant Info</AppHeader>
-           <p>This app gets data from the PlantInfo API and displays it</p>
+           <p>This app gets data from the PlantInfo API and displays it as three distinct line charts.</p>
            <RouteButton />
        </MenuContainer>
     )
