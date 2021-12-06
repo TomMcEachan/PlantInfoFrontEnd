@@ -2,6 +2,23 @@
 
 This is a simple project I built as part of my Internet of Things module in 3rd year of my BSc Software Engineering Degree at Edinburgh Napier University.
 
+I chose to develop the project with the 'smart-city' IoT domain which is probably the most broad domain. 
+
+As such I decided to focus on one aspect of a city - it's public parks. The following sections details how I designed a prototype that would allow a city to collect and share data about the plants kept in these parks. In particular, I looked at how a city could implement an open-source IoT soloution to encourage collaboration within the municipality. 
+
+![image of the plant prototype](images\HardwarePrototypeImage.jpg)
+
+### Architecture 
+When developing something within the smart-city domain it is almost impossible to find a ubiqutious architecture to base your system upon due to the fact that each city has its own numerous variables to consider. Given this, I opted to ammend an already existing architecture (Cisco's IoT Reference Model) to meet the specific needs of my project. 
+
+![image of the plant prototype](images\CiscoArchitecture.png)
+
+Using this architecture, I constructed one that made sense for the scope of my project: 
+
+![image of the plant prototype](images\PlantDataArchitecture.png)
+
+Using this architecture, I then endeavoured to begin work on the physical component of the project.
+
 ### Hardware
 
 As an IoT assignment the project utilises some simple sensors to collect data about a plant and it's surroundings and sends this data to the cloud to be used. The data collected includes:
@@ -10,6 +27,12 @@ As an IoT assignment the project utilises some simple sensors to collect data ab
 2. The humidity of the immediate area surrounding the plant (collected by a **DHT22 sensor**)
 3. The temperature of the immediate area surrounding the plant (collected by a **DHT22 sensor**)
 4. The edge processing is completed by a Particle Argon which publishes the data to the cloud.
+
+![image of the plant prototype](images\FritzingImage.png)
+
+The following image is a graphical representation of how I hope the system would work in the real world.
+
+![image of the plant prototype](images\Nodes.png)
 
 ### Software 
 #### Edge Processing

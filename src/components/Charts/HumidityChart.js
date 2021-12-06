@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {VictoryLine, VictoryBar, VictoryChart, VictoryTheme , VictoryAxis} from 'victory';
+import { ChartContainer } from '../Container';
 
 export default function HumidChart() {
 
@@ -27,43 +28,43 @@ export default function HumidChart() {
 
    //Renders the data from the API as a Line Chart
 
-   
    return(
-   <div>
-      <VictoryChart theme={VictoryTheme.material} 
-      domainPadding={10} padding={25}
-      animate={{duration: 2000}}
-      
-      >
-         <VictoryAxis fixLabelOverlap 
-            label="Published At"
-            style={{
-               tickLabels: {fill: "transparent"}
-            }}
-         />
-         <VictoryAxis dependentAxis
-            label="Humidity"
-            style={{
-               tickLabels: {fill: "transparent"}
-            }}
-         />
-         <VictoryBar 
-             style={{data: {fill: "#add8e6"}}}
-             alignment="start"
-             data={temps} 
-             x="published" 
-             y="humidity"
-         />
-         
-         <VictoryLine 
-         interpolation="natural"
-         padding={{top: 20, bottom: 60}}
-         style={{data: {stroke: "#49FF00"}}}
-         alignment="start"
-         data={temps} 
-         x="published" 
-         y="humidity"/>
-      </VictoryChart>
-   </div>
+   <ChartContainer>
+      <div>
+         <VictoryChart theme={VictoryTheme.material} 
+         domainPadding={10} padding={25}
+         animate={{duration: 2000}}
+         >
+            <VictoryAxis fixLabelOverlap 
+               label="Published At"
+               style={{
+                  tickLabels: {fill: "transparent"}
+               }}
+            />
+            <VictoryAxis dependentAxis
+               label="Humidity"
+               style={{
+                  tickLabels: {fill: "transparent"}
+               }}
+            />
+            <VictoryBar 
+               style={{data: {fill: "#add8e6"}}}
+               alignment="start"
+               data={temps} 
+               x="published" 
+               y="humidity"
+            />
+            
+            <VictoryLine 
+            interpolation="natural"
+            padding={{top: 20, bottom: 60}}
+            style={{data: {stroke: "#49FF00"}}}
+            alignment="start"
+            data={temps} 
+            x="published" 
+            y="humidity"/>
+         </VictoryChart>
+      </div>
+   </ChartContainer>
    );
 }
