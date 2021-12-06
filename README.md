@@ -6,16 +6,16 @@ I chose to develop the project with the 'smart-city' IoT domain which is probabl
 
 As such I decided to focus on one aspect of a city - it's public parks. The following sections details how I designed a prototype that would allow a city to collect and share data about the plants kept in these parks. In particular, I looked at how a city could implement an open-source IoT soloution to encourage collaboration within the municipality. 
 
-![image of the plant prototype](images\HardwarePrototypeImage.jpg)
+![image of the plant prototype](images/HardwarePrototypeImage.jpg)
 
 ### Architecture 
 When developing something within the smart-city domain it is almost impossible to find a ubiqutious architecture to base your system upon due to the fact that each city has its own numerous variables to consider. Given this, I opted to ammend an already existing architecture (Cisco's IoT Reference Model) to meet the specific needs of my project. 
 
-![image of the cisco architecture](images\CiscoArchitecture.png)
+![image of the cisco architecture](images/CiscoArchitecture.png)
 
 Using this architecture, I constructed one that made sense for the scope of my project: 
 
-![image of the plant data architecture](images\PlantDataArchitecture.png)
+![image of the plant data architecture](images/PlantDataArchitecture.png)
 
 Using this architecture, I then endeavoured to begin work on the physical component of the project.
 
@@ -28,11 +28,11 @@ As an IoT assignment the project utilises some simple sensors to collect data ab
 3. The temperature of the immediate area surrounding the plant (collected by a **DHT22 sensor**)
 4. The edge processing is completed by a Particle Argon which publishes the data to the cloud.
 
-![image of a fritzing image](images\FritzingImage.png)
+![image of a fritzing image](images/FritzingImage.png)
 
 The following image is a graphical representation of how I hope the system would work in the real world.
 
-![image of the plant data nodes](images\Nodes.png)
+![image of the plant data nodes](images/Nodes.png)
 
 ### Software 
 #### Edge Processing
