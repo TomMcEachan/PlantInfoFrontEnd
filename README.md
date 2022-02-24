@@ -1,5 +1,7 @@
 # PlantData API (Internet of Things Project)
 
+*Note that only the code is available now.
+
 This is a simple project I built as part of my Internet of Things module in 3rd year of my BSc Software Engineering Degree at Edinburgh Napier University.
 
 I chose to develop the project with the 'smart-city' IoT domain which is probably the most broad domain. 
