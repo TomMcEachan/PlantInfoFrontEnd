@@ -1,6 +1,7 @@
 # PlantData API (Internet of Things Project)
 
 *Note that only the code is available now. 
+
 ** An academic version of this report can be found at **https://drive.google.com/file/d/13ChxgQNwqo7iUmK6vIQ-C7bo9vQVCH-h/view?usp=sharing**
 
 This is a simple project I built as part of my Internet of Things module in 3rd year of my BSc Software Engineering Degree at Edinburgh Napier University.
