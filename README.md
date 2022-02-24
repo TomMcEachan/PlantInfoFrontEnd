@@ -179,8 +179,6 @@ Each of the gCloud functions took the data from the PubSub message and converted
 
 Once the data was streaming to the MySQL database I decided that the best way to ensure there was a further layer of abstraction between the potential end-user and the database was to create an API that provided only the most essential information. This also neatly fit in with the IoT domain I had selected as part of the assignment - Smart Cities - as in my research I discovered that one of the main tenets of developing a smart city is providing Open Source data for others to use in creative ways. 
 
-The front-end of the API can be found at  **https://plantinfo-api.netlify.app/**
-
 ![image of the plant-info api front end](images/PlantInfoImage.png)
 
 The front-end of the API provides two ways for a potential developer to access the data: 
